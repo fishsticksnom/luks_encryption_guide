@@ -18,9 +18,9 @@ sudo fdisk -l
 
 The command above will show you a list of the devices connected into your computer.  
 
-
+<div align="center">
 <img src="./assets/carbon.png" alt="list of devices" width="500"/>
-
+</div>
 ## Step 2  
 
 In my case the device is located in /dev/sda so I'm going to choose:
