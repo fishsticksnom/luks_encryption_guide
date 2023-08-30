@@ -21,6 +21,7 @@ The command above will show you a list of the devices connected into your comput
 <div align="center">
 <img src="./assets/carbon.png" alt="list of devices" width="500"/>
 </div>
+
 ## Step 2  
 
 In my case the device is located in /dev/sda so I'm going to choose:
@@ -65,7 +66,7 @@ Make filesystem for the luks partition.
 For this example I will use ext4 but you can choose any other format.  
 
 ```bash
-sudo mkfs.ext4 /dev/mapper/hamburger
+sudo mkfs.ext4 /dev/mapper/backup
 ```
 
 ## Step 6  
@@ -73,7 +74,7 @@ sudo mkfs.ext4 /dev/mapper/hamburger
 Mount the Partition
 
 ```bash
-sudo mount /dev/mapper/hamburger /mnt
+sudo mount /dev/mapper/backup /mnt
 ```
 
 ##  Step 7  
@@ -82,6 +83,6 @@ Unmount and close partition
 
 ```bash
 sudo umount /mnt
-sudo cryptsetup close hamburger
+sudo cryptsetup close backup
 ```
 
